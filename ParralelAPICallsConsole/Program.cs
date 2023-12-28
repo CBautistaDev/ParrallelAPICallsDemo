@@ -16,17 +16,16 @@ for (var i = 1; i <= 100; i++)
 
 var watch = System.Diagnostics.Stopwatch.StartNew();
 
-//var responses = await HelperClass.CallsApiInParallel(apiUrls);
+var responses = await HelperClass.CallsApiInParallel(apiUrls);
   
-var normalReponses = await HelperClass.CallAPINormal(apiUrls);
-
+//var normalReponses = await HelperClass.CallAPINormal(apiUrls);
 watch.Stop();
 
-foreach(var response in normalReponses)
-{
-  Console.WriteLine(response);
-}
+//foreach(var response in normalReponses)
+//{
+//  Console.WriteLine(response);
+//}
 
 
-//Console.WriteLine($"Total time taken in Parrallel: {watch.ElapsedMilliseconds} ms");
-Console.WriteLine($"Total time taken in normal calls: {watch.ElapsedMilliseconds} ms");
+Console.WriteLine($"Total time taken in Parrallel: {watch.ElapsedMilliseconds} ms");
+//Console.WriteLine($"Total time taken in normal calls: {watch.ElapsedMilliseconds} ms");
